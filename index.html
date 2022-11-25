@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax Scrolling Website</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="/images/stars.png" id="stars">
+        <img src="/images/moon.png" id="moon">
+        <img src="/images/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#" id="btn">Explore</a>
+        <img src="/images/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quod obcaecati odio dignissimos tenetur ipsam voluptatum, facilis officia excepturi ratione reprehenderit sequi deleniti autem ex quia nostrum accusamus sint exercitationem adipisci aperiam porro quae expedita molestias consequuntur. Eligendi necessitatibus, facere earum quibusdam rem laborum provident inventore, dolores ullam totam ex voluptas at sapiente magnam quo repellendus nulla? Reiciendis magnam libero odio tempore, molestias sit ea quod enim voluptate exercitationem sequi suscipit id autem incidunt illum dignissimos labore corporis eaque, aliquid placeat, sunt cum! Eaque, facere veritatis ducimus id iste eveniet at saepe voluptates nam quae corrupti et magnam tenetur aut molestias ab ut obcaecati porro! Blanditiis laborum est, provident alias maxime corrupti? Doloribus, iure corporis. Eum facere quia a placeat.<br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ullam possimus, quo aperiam cumque quasi aut, voluptatem quis ipsum aspernatur, debitis voluptate! Voluptas ducimus eius ullam! Aliquam consectetur eius laboriosam qui magnam, odit hic doloribus consequuntur amet atque ipsa quod eum labore cum officiis esse debitis ipsum! Harum quasi odio aperiam suscipit! A officia harum esse nisi et tenetur est! Dolorem sunt dolore aliquid nostrum tempore eos? Cum corrupti porro optio eum, error cumque ad animi saepe repudiandae obcaecati quo amet omnis unde mollitia. Eos hic repellat architecto saepe laudantium reprehenderit itaque quidem, et id aliquam optio animi neque, autem alias dolore dolores numquam porro exercitationem, repudiandae debitis ducimus tempore accusamus asperiores! Numquam quas quis vero saepe iste dolores suscipit.<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure magnam nesciunt tenetur asperiores qui quia, laudantium alias laborum nulla excepturi voluptas voluptatum a provident eum natus eaque aliquam ipsum beatae neque! Nesciunt, ut? Nemo animi nobis amet perspiciatis, alias neque quisquam. Sunt autem odio ex fuga dicta libero adipisci, obcaecati doloremque consectetur facilis dolorum architecto beatae repellendus vitae, eius ipsum magni distinctio? Consequatur, molestiae. Qui distinctio quam ullam adipisci animi, provident neque aliquid ea reiciendis ad nobis doloribus cum maiores recusandae fugiat necessitatibus tenetur illo porro iusto minima nam consequuntur? Recusandae architecto atque a ut molestias quae odio excepturi eos officia vitae magnam nisi corrupti, itaque veritatis quaerat id maxime ducimus, iure debitis rem possimus provident optio dolore est. Nobis?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum repudiandae, ex libero voluptate quidem qui ratione animi dolore, praesentium dolorum voluptatem quibusdam consequuntur! Odio vel distinctio autem quas numquam nihil velit nostrum dicta laudantium, molestiae eos optio quis beatae itaque repellendus perspiciatis ipsam earum quo doloribus veniam tenetur quibusdam fugiat praesentium! Cumque, ea officia. Odio temporibus delectus distinctio ad, cumque enim illo est eligendi cum magnam consectetur deserunt quisquam facere id minima error, commodi nisi sapiente voluptatum sed nostrum nesciunt nulla accusantium quia! Officia nulla labore iste, ullam velit minus esse sint dolores optio voluptate magnam sapiente dolor eligendi quia qui ab excepturi possimus! Magnam totam et est, blanditiis iste amet recusandae iusto voluptatibus illo molestiae rerum explicabo distinctio aperiam.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque in aliquid quis nulla, optio quam a! Facere tempora labore, quisquam dolores repudiandae nam consectetur inventore, aspernatur, eos neque hic. Adipisci repellendus dignissimos saepe quia magni! Doloremque, amet. Mollitia consequatur dolorum necessitatibus dolores quam autem repellat? Laborum vel, aliquid explicabo rerum amet assumenda reprehenderit? Enim iusto quisquam dicta vel ex tempore amet, alias, iste reprehenderit labore autem pariatur. Ea, suscipit ad autem dolorum doloremque voluptatem consequatur, molestias dolorem sapiente voluptatibus animi, delectus cupiditate voluptate repellat blanditiis illum! Enim saepe fuga accusantium esse amet rem consequatur ad debitis facere animi velit tenetur nobis libero unde recusandae, a totam in impedit consectetur atque, nemo assumenda aliquam. Culpa mollitia reiciendis eum ipsam. Voluptates, ipsum.</p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+ 
+            value > 3 ? header.classList.add('sticky') : header.classList.remove('sticky');
+
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value* 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+        })
+    </script>
+    
+</body>
+
+</html>
